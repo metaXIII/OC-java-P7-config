@@ -9,3 +9,7 @@ spring:
           uri: http://localhost:8003/
           predicates:
             - Path=/api/user/**
+        - id: user
+          uri: http://localhost:8001/
+          predicates:
+            - Path=/api/librairie/**
