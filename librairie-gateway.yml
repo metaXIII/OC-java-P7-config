@@ -13,3 +13,7 @@ spring:
           uri: http://localhost:8001/
           predicates:
             - Path=/api/librairie/**
+        -id: reservation
+          uri: http://locahost:8002/
+          predicates:
+            - Path=/api/reservation/** 
