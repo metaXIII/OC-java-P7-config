@@ -16,4 +16,8 @@ spring:
         - id: reservation
           uri: http://localhost:8002/
           predicates:
-            - Path=/api/reservation/** 
+            - Path=/api/reservation/**
+        - id: batch
+          uri: http://localhost:8004/
+          predicates:
+            - Path=/api/batch/**
