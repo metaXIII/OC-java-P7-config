@@ -4,8 +4,12 @@ server:
 scheduler:
   enabled: true
   trigger:
+    #    cron-expression: 0 0 18 ? * * *
     cron-expression: 0/30 * * ? * * *
 spring:
   batch:
     job:
       enabled: false
+app:
+  default-email-sender:
+    no-reply@test:com
