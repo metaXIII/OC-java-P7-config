@@ -10,6 +10,9 @@ spring:
   batch:
     job:
       enabled: false
+  mail:
+    host: localhost
+    port: 2500
 app:
   default-email-sender:
     no-reply@test:com
