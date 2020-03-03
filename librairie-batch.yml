@@ -15,4 +15,4 @@ spring:
     port: 2500
 app:
   default-email-sender:
-    no-reply@test:com
+    no-reply@test.com
