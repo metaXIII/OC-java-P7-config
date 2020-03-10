@@ -21,3 +21,41 @@ spring:
           uri: http://localhost:8004/
           predicates:
             - Path=/api/batch/**
+Configuration: 
+ Properties: 
+  Property: 
+   _name: LOG_PATTERN
+   __text: "%d{yyyy-MM-dd HH:mm:ss.SSS} %5p ${hostName} --- [%15.15t] %-40.40c{1.} : %m%n%ex"
+   toString: 
+ Appenders: 
+  Console: 
+   PatternLayout: 
+    _pattern: "${LOG_PATTERN}"
+   _name: Console
+   _target: SYSTEM_OUT
+   _follow: true
+  RollingFile: 
+   PatternLayout: 
+    Pattern: "${LOG_PATTERN}"
+   Policies: 
+    TimeBasedTriggeringPolicy: 
+     _interval: 1
+    SizeBasedTriggeringPolicy: 
+     _size: 10MB
+   DefaultRolloverStrategy: 
+    _max: 10
+   _name: logFile
+   _fileName: "logs/librairie.log"
+   _filePattern: "logs/log4j2-demo-%d{yyyy-MM-dd}-%i.log"
+ loggers: 
+  root: 
+   "appender-ref": 
+    - 
+   _ref: Console
+     _level: info
+    - 
+   _ref: logFile
+     _level: error
+   _level: debug
+ _status: WARN
+ _monitorInterval: 30
