@@ -4,8 +4,7 @@ server:
 scheduler:
   enabled: true
   trigger:
-    #    cron-expression: 0 0 18 ? * * *
-    cron-expression: 0/30 * * ? * * *
+    cron-expression: 0 0 18 ? * * *
 spring:
   batch:
     job:
